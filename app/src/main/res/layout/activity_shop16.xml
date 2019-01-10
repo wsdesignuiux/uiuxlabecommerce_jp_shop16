@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#070707"
+    android:orientation="vertical"
+    tools:context=".Shop16">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:background="#fcfcfc">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewPager16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="360dp" />
+
+
+                <com.viewpagerindicator.LinePageIndicator
+                    android:id="@+id/indicator_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    app:gapWidth="8dp"
+                    app:lineWidth="105dp"
+                    app:selectedColor="@color/White_indicator"
+                    app:unselectedColor="@color/grey_indicator" />
+
+            </FrameLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout16"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="#ffffff"
+                app:tabIndicatorHeight="2dp"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="#FFFFFF"
+                app:tabTextAppearance="@style/CustomTextStyle"
+                app:tabTextColor="#99FFFFFF" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#33ffffff" />
+
+            <e.wolfsoft1.uiuxlabecommerce_jp_shop16.adapter.WrapContentHeightViewPager
+                android:id="@+id/viewpager_tab16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
